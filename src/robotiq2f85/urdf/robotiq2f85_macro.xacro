@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Wrap the original Robotiq 2F‑85 URDF in a macro -->
+  <xacro:macro name="robotiq2f85_model" params="parent prefix:=">
+
+    <!-- Bring in the vendor-provided URDF -->
+    <xacro:include filename="$(find robotiq2f85)/urdf/robotiq_arg2f_85_model.urdf"/>
+
+    <!-- Fixed joint that bolts the gripper to the robot tool frame -->
+    <joint name="${prefix}gripper_mount" type="fixed">
+      <parent link="${parent}"/>
+      <child  link="${prefix}base_link"/>   <!-- matches <link name="gripper_base_link"> -->
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+  </xacro:macro>
+</robot>

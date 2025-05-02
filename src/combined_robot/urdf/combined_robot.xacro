@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ur10e_with_2f85">
+
+  <xacro:include filename="$(find robotgripper)/urdf/ur10e_macro.xacro"/>
+  <xacro:include filename="$(find robotiq2f85)/urdf/robotiq2f85_macro.xacro"/>
+
+  <xacro:ur10e_model/>
+  <xacro:robotiq2f85_model parent="tool0" prefix="gripper_"/>
+
+</robot>

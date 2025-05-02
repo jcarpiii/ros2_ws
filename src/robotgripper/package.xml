@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>robotgripper</name>
+  <version>0.0.1</version>
+  <description>ROS 2 package for demonstrating a robot gripper URDF in RViz</description>
+  <maintainer email="jack@todo.todo">jack</maintainer>
+  <license>Apache-2.0</license> <!-- Or another valid license -->
+
+  <!-- Build tool dependencies (for Python-based packages) -->
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Runtime/Execution dependencies -->
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+
+  <!-- Test dependencies (keep or adjust as needed) -->
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <!-- Export your package build type -->
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
